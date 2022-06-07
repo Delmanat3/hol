@@ -1,0 +1,51 @@
+.takeThree {
+  @apply flex h-40 mt-32;
+  background: linear-gradient(to bottom, #00000066, rgba(0, 0, 0, 0.4)),
+    url('http://basil.alopexnxt.dev/wp-content/uploads/sites/7/2021/10/basil-ginger-background-seamless-scaled.jpg');
+}
+.logoMe {
+  @apply xl:h-24 xl:w-28 lg:h-24 lg:w-28 md:h-20 md:w-24 relative;
+}
+.logoLink {
+  @apply flex items-center xl:pl-32 xl:pr-3 lg:pl-24 lg:pr-3 md:pl-20 md:pr-3;
+
+  border-right: solid white 1px;
+}
+
+.footRight {
+  @apply flex text-white lg:p-4 lg:text-base text-base pr-4 justify-around items-center;
+  width: -webkit-fill-available;
+  font-family: 'Gill Sans Regular', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+    sans-serif;
+}
+.rightLeft {
+  @apply pr-3 pl-3;
+}
+.footICN {
+  @apply flex w-6 flex-wrap;
+}
+.paddMe {
+  padding: 2px;
+}
+.footPar {
+  @apply lg:text-base text-sm;
+  font-family: 'Gill Sans Regular', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+    sans-serif;
+}
+.heads {
+  @apply text-base;
+}
+.rightMid {
+  @apply pr-4;
+}
+.rightRite {
+  @apply flex pr-12 md:items-center items-end;
+}
+@media screen and (max-width: 800px) {
+  .logoMe {
+    display: none;
+  }
+  .logoLink {
+    display: none;
+  }
+}

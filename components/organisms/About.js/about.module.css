@@ -1,0 +1,31 @@
+.redBox {
+  @apply h-80 flex;
+
+  background-color: '#B12A1B';
+}
+
+.cheesin {
+  @apply w-3/12;
+}
+
+.welcome {
+  height: -webkit-fill-available;
+}
+
+.about {
+  @apply flex items-center m-12 max-w-md flex-col justify-center;
+}
+
+.welc {
+  @apply flex justify-center text-white text-xl;
+
+  font-weight: 500;
+}
+
+.placer {
+  @apply text-white;
+
+  overflow-wrap: break-word;
+
+  max-width: 450px;
+}

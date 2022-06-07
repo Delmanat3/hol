@@ -1,0 +1,82 @@
+.Item {
+  @apply text-left px-6 pb-9;
+
+  & h4 {
+    @apply flex;
+  }
+
+  & span {
+    @apply text-basilGold pl-1 font-bold text-base;
+
+    line-height: 18px;
+  }
+
+  & .spicy {
+    @apply w-5 h-4;
+
+    content: url('http://basil.alopexnxt.dev/wp-content/uploads/sites/7/2021/10/Spicy.svg') !important;
+  }
+
+  & .heading {
+    @apply flex pb-1;
+
+    & div {
+      @apply inline-block;
+
+      & span {
+        @apply pl-2;
+      }
+    }
+  }
+
+  & .description {
+    @apply text-white text-base leading-4.5;
+
+    & div {
+      @apply text-base;
+
+      & span {
+        @apply text-white text-base font-normal pl-0;
+      }
+
+      & ul,
+      & ol {
+        @apply flex flex-wrap w-full;
+
+        & li {
+          @apply w-1/2 pb-1;
+        }
+      }
+    }
+  }
+
+  & .multiPrice {
+    @apply flex flex-wrap text-white;
+
+    & h4 {
+      @apply w-full pb-1 flex flex-wrap;
+    }
+
+    & .multi {
+      @apply flex flex-wrap pt-1 w-full;
+    }
+
+    & p {
+      @apply pb-1;
+    }
+
+    & p::after {
+      @apply px-1;
+
+      content: '|';
+    }
+
+    & p:last-child::after {
+      content: '';
+    }
+  }
+}
+
+.Item:first-child {
+  @apply pt-9;
+}

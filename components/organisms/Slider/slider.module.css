@@ -1,0 +1,28 @@
+.ImageSlider {
+  @apply flex justify-center;
+
+  & .text {
+    @apply max-w-full border-l-4  px-10 transform;
+
+    & .testimonal {
+      width: auto;
+    }
+
+    & .author {
+      @apply uppercase text-lg tracking-widest italic;
+    }
+  }
+
+  /* Slider Styling */
+  & .slick-list {
+    & button {
+      &::before {
+        @apply bg-black;
+      }
+    }
+  }
+
+  .slick-arrow.slick-next {
+    z-index: 0;
+  }
+}

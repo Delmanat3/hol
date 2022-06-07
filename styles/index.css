@@ -1,0 +1,108 @@
+@layer base {
+  body {
+    @apply font-sans;
+    background-repeat-y: repeat;
+    background-image: url('http://basil.alopexnxt.dev/wp-content/uploads/sites/7/2022/06/House-Rolls-Lava-Roll.jpg');
+    background-repeat-y: inherit;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #page-content {
+    /* Global Styles */
+
+    & .innerWrap {
+      @apply my-auto;
+    }
+
+    & ul:not(.breadcrumbs),
+    & ol,
+    & p {
+      & a {
+        @apply text-blue-500 underline tracking-wider;
+
+        &:hover,
+        &:focus {
+          @apply no-underline;
+        }
+      }
+    }
+
+    /* Body Heading Styles */
+    & h1,
+    & h2,
+    & h3,
+    & h4 {
+      @apply font-light text-white tracking-wider;
+
+      font-variant: small-caps;
+    }
+
+    & h1 {
+      @apply text-2xl leading-12;
+    }
+
+    & h2 {
+      @apply text-2xl leading-12;
+    }
+
+    & h3 {
+      @apply text-xl leading-9;
+    }
+
+    & h4 {
+      @apply text-xl leading-4.5;
+    }
+
+    /* Rich Text Styles */
+    & p,
+    & ul,
+    & ol {
+      @apply text-lg text-white tracking-wider;
+    }
+
+    & a {
+      @apply text-base leading-4 text-basilGold ease-in-out duration-500;
+
+      font-variant: small-caps;
+
+      & :hover {
+        @apply text-white;
+      }
+    }
+  }
+}
+.bowlOfSoup {
+  @apply absolute xl:h-40 xl:w-40 xl:bottom-16 lg:h-32 lg:w-32 lg:bottom-24 md:h-32 md:w-28 md:bottom-20    !important;
+  right: 92%;
+}
+.stickFisj {
+  @apply absolute xl:h-14 xl:w-16 xl:bottom-24 lg:h-32 lg:w-32 lg:bottom-28 md:h-32 md:w-28 md:bottom-32    !important;
+  right: -18px;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  /* Hide scrolbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Write you own custom classes here if necessary */
+.info {
+  @apply text-base font-normal px-6;
+
+  font-size: 1rem !important;
+}
+
+.bot-margin {
+  @apply mb-9;
+}
+
+.top-margin {
+  @apply mt-9;
+}
+
+.info:last-child {
+  @apply pb-9;
+}
