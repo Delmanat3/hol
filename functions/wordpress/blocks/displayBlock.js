@@ -72,6 +72,8 @@ const AccordionBlock = dynamic(() =>
 )
 const ItemBlock = dynamic(() => import('@/components/blocks/ACF/ItemBlock'))
 const SliderBlock = dynamic(() => import('@/components/blocks/ACF/SliderBlock'))
+const AboutBlock = dynamic(() => import('@/components/blocks/ACF/AboutBlock'))
+
 
 
 /**
@@ -136,6 +138,8 @@ export default function displayBlock(block, index) {
       return <ItemBlock attributes={attributes} key={index} />
       case 'acf/slider':
         return <SliderBlock attributes={attributes} key={index} />
+      case 'acf/about':
+        return <AboutBlock attributes={attributes} key={index} />
     default:
       return <pre key={index}>{JSON.stringify(block, null, 2)}</pre>
   }

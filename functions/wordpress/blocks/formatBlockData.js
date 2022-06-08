@@ -30,6 +30,23 @@ export default async function formatBlockData(blocks) {
           attributes.imageMeta = await getMediaByID(attributes?.id)
           break
 
+        case 'acf/about':
+          // Retrieve additional image meta.
+          attributes.data.imageMetas = {}
+          attributes.data.imageMetas.image = await getMediaByID(
+            attributes?.data[`image`]
+          )
+          attributes.data.imageMetas._background_image = await getMediaByID(
+            attributes?.data[`_background_image`]
+          )
+          // attributes.data.imageMetas.spot_three_image_meta = await getMediaByID(attributes?.data[`spot_three_image`])
+          // attributes.data.imageMetas.spot_four_image_meta = await getMediaByID(attributes?.data[`spot_four_image`])
+          // attributes.data.imageMetas.spot_five_image_meta = await getMediaByID(attributes?.data[`spot_five_image`])
+          break
+
+          attributes.data.imageMeta = await getMediaByID(attributes?.data.image)
+          console.log(attributes)
+          break
         case 'gravityforms/form':
           // Retrieve form data.
           attributes.formData = await getGfFormById(attributes?.formId)
@@ -40,9 +57,7 @@ export default async function formatBlockData(blocks) {
           attributes.data.imageMetas = []
           for (let z = 0; z < attributes.data.image_repeater; z++) {
             attributes.data.imageMetas.push(
-              await getMediaByID(
-                attributes?.data[`image_repeater_${z}_imageRepeater_image`]
-              )
+              await getMediaByID(attributes?.data[`image_repeater_${z}_image`])
             )
           }
           break

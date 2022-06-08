@@ -1,35 +1,24 @@
 import styles from './about.module.css'
 
 const balls = '/images/welcome.jpg'
-const wackOutline = '/images/Outline.png'
+const wackOutline = '/images/Outline.webp'
 
-export default function About() {
-  const alterables = useWordPressContext()
-  const socialMedia = alterables.alterables.optionsSocialMedia
-  console.log(socialMedia)
+export default function About({heading, image, _background_image, paragraph}) {
+  console.log(image)
   return (
-    <div
-      className={styles.redBox}
-      style={{height: '302px', backgroundColor: '#B12A1B', display: 'flex'}}
-    >
+    <div className={styles.redBox} style={{height: '302px', display: 'flex'}}>
+      {' '}
+      <img src={_background_image.mediaItemUrl} alt="mountain view" />
       {/* aPICTURE */}
       <div className={styles.cheesin}>
-        <img className="welcome" src={balls} alt="welcome" />
+        <img className="welcome" src={image} alt="welcome" />
       </div>
       {/* START TEXT */}
       <div className={styles.about}>
         <div>
-          <h1 className={styles.welc}>Welcome</h1>
-
-          <div className={placer}>
-            {alterables.optionsSocialMedia.welcome_paragraph}
-          </div>
+          <div className={styles.placer}></div>
         </div>
       </div>
-      <div>
-        <img src={wackOutline} alt="mountain view" />
-      </div>
-      {/* START WEIRD MOUNTAIN THING */}
     </div>
   )
 }
