@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Container from '@/components/atoms/Container'
 import DisplayImage from '@/components/atoms/Image'
 import cn from 'classnames'
@@ -8,7 +7,6 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import styles from './slider.module.css'
-import  displayBlock  from '@/functions/wordpress/blocks/displayBlock';
 
 /**
  * @param  {object}  props             SliderContainer component props.
@@ -103,14 +101,14 @@ export default function ImageSlider({ className, images, imageMetas, imageRepeat
         {images.map((item, i) => {
           let currImage
           let currImageLink
-          let currMeta = imageMetas[i]
+          // let currMeta = imageMetas[i]
           if (item.image) {
             currImage =
               <DisplayImage
                 className={styles.imageWrap}
                 id={item.image}
                 alt={currMeta?.altText}
-                imageMeta={currMeta}
+                // imageMeta={currMeta}
               />
           }
 

@@ -57,7 +57,8 @@ export default async function formatBlockData(blocks) {
           attributes.data.imageMetas = []
           for (let z = 0; z < attributes.data.image_repeater; z++) {
             attributes.data.imageMetas.push(
-              await getMediaByID(attributes?.data[`image_repeater_${z}_image`])
+              'https://hi.com'
+              // await getMediaByID(attributes?.data[`image_repeater_${z}_image`])
             )
           }
           break
